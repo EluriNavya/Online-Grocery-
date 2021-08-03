@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="eatfresh.css">
+    <script>
+        function stickyMenu()
+        {
+            var sticky=document.getElementById('sticky');
+            if(window.pageYOffset > 220)
+            {
+                sticky.classList.add('sticky');
+            }
+            else
+            {
+            sticky.classList.remove('sticky');
+        }
+    }
+        window.onscroll=function()
+        {
+            stickyMenu();
+        }
+    </script>
+   <div class="parallax">
+       <div class="page-title">Eat Fresh</div>
+   </div>
+    <style>
+        body{
+            margin: 0;
+            font-family: system-ui;
+        }
+    .parallax,.parallax1
+    {
+        background-image:url(veg.jpg);
+        height: max-content;
+        background-attachment: fixed;
+        background-position:center ;
+        background-repeat: no-repeat;
+        background-size:cover ;
+    }
+     .page-title
+        {
+            background: rgba(0,0,0,0.5);
+            text-align: center;
+            color: white;
+            padding: 50px;
+            font-variant: small-caps;
+            font-size: 100px;
+            font-family: fantasy;
+            letter-spacing: 20px;
+        }
+    </style>
+<div class="menu" id="sticky">
+    <style>
+  .sticky
+{
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+ .menu
+{
+    background:green;
+    text-align: center;
+}
+</style>
+ <ul class="menu-ul">
+        <style>
+  .menu-ul
+{
+    margin: 0;
+    padding: 0;
+    display:inline;
+
+}
+.menu-ul li{
+    font-size: 17px;
+    list-style: none;
+    display: inline-block;
+    padding: 25px 25px 26px 25px;    
+}  
+.menu-ul li:hover{
+    background:green;
+    transform:scale(1.1);
+}
+        </style>
+        <a href="#" class="a-menu"><li>Home</li></a>
+        <style>
+.a-menu, .a-links
+{
+    text-decoration: none;
+    color: white;
+}
+        </style>
+        <a href="#deals" class="a-menu"><li>Deals</li></a>
+        <a href="#vegetables" class="a-menu"><li>Vegetables</li></a>
+        <a href="#fruits" class="a-menu"><li>Fruits</li></a>
+        <a href="#" class="a-menu"><li>Cart</li></a>
+</ul>
+    <div class="search-box">
+        <style>
+ .search-box
+{
+    border: 1px solid white;
+    border-radius: 50px;
+    background: white;
+    width: max-content;
+    display: inline-block;
+    margin: 8px;
+}
+.search-box:hover{
+    box-shadow: 0 0 10px 2px green;
+    border:1px solid green;
+}
+        </style>
+        <form>
+            <input type="text" placeholder="search..." name="search" class="search-input">
+            <style>
+                .search-input
+                {
+                    width: 250px;
+                    border:none;
+                    font-size: 18px;
+                    outline: none;
+                    background: transparent;
+                    margin: 10px 0 0 5px;
+                }
+            </style>
+            <button type="submit"></button>
+        </form>
+        <style>
+            button
+            {
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+        </style>
+    </div>
+
+</div>
+<!--Home Page Begins-->
+<div class="container">
+    <style>
+        .container,.deals-container
+{
+    margin: 50px 50px 50px 5%;
+    width: 90%;
+text-align:left;
+}
+    </style>
+    <a href="#vegetables">
+        <div class="categories">
+            <style>
+.categories, .items
+{
+    width: max-content;
+    margin: 25px;
+    border: 1px solid black;
+    border-radius: 0 0 50px 50px;
+    display: inline-block;
+}
+.categories:hover, .items:hover
+{
+    box-shadow: 0 0 10px 3px black;
+}
+            </style>
+        <img src="cabbage.jpg" class="item-image"/>
+        <style>
+          .item-image
+{
+    height: 200px;
+    width:200px ;
+    border-radius:0 0 50px 50px;
+    padding:10px;
+}
+        </style>
+        <div class="image-title">Vegetables</div>
+<style>
+    .image-title
+{
+    text-align: center;
+    padding: 10px;
+    font-weight:bold;
+}
+.a{
+    text-decoration: none;
+}
+</style>
+        </div>
+</a>
+<div class="container">
+    <a href="#fruits">
+        <div class="categories">
+        <img src="apple.jpg" class="item-image"/>
+        <div class="image-title">Fruits</div>
+    </a>
+    </div>
+</div>
+<div class="container">
+    <a href="#deals">
+        <div class="categories">
+        <img src="deals.jpg" class="item-image"/>
+        <div class="image-title">Deals</div>
+    </a>
+        </div>
+        <!--Deal Begins Here -->
+<div class="deals-container" id="deals">
+    <div class="parallax">
+    <div class="title">DEALS</div>
+</div>
+<style>
+    .title{
+padding: 50px;
+font-size:50px ;
+font-weight:bold;
+letter-spacing: 10px;
+color: white;
+background: rgba(0,0,0,0.5);
+    }
+</style>
+<div class="deal">
+save 20% on min-purchase 0f $100 on Vegetables<br/>
+    <Button class="coupon-btn">Add Coupon</Button>
+</div>
+<style>
+    .deal
+    {
+        padding: 50px;
+        font-size: 20px;
+        font-weight:bold ;
+        color:green;
+        display:inline-block;
+        margin: 15px;
+        max-width: 20%;
+        background: linear-gradient(yellow,pink);
+    }
+    .coupon-btn
+    {
+        border: 1px black;
+        color:orangered;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+</style>
+<div class="deal">
+save 15% on min-purchase 0f $150 on Fruits<br/>
+<Button class="coupon-btn">Add Coupon</Button>
+</div>
+<!--Deal Ends Here -->
+<!--Veg Begins Here -->
+<div class="deals-container" id="vegetables">
+    <div class="parallax">
+        <div class="title">VEGETABLES</div>
+    </div>
+    <div class="items">
+        <div class="images">
+            <img src="potato.jpg" class="item-image-size">
+        </div>
+        <div class="description">
+            <b>Potato</b><br/>
+            <div class="item-select">
+                price:$15.78/250grams
+            </div>
+            <label> Qty:</label>
+            <select class="items-select">
+                <option>250 grams</option>
+                <option>500 grams</option>
+                <option>750 grams</option>
+                <option>1000 grams</option>
+            </select><br/>
+            <button class="buynow-btn">Buy Now</button>
+        </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="tomato.jpg" class="item-image-size">
+                </div>
+            <div class="description">
+                <b>Tomatoes</b><br/>
+                <div class="item-select">
+                    price:$23.87/250grams
+                </div>
+                <label> Qty:</label>
+                <select class="items-select">
+                    <option>250 grams</option>
+                    <option>500 grams</option>
+                    <option>750 grams</option>
+                    <option>1000 grams</option>
+                </select><br/>
+                <button class="buynow-btn">Buy Now</button>
+            </div>
+            <style>
+                .images
+                {
+                    display: inline-block;
+                }
+                .item-image-size
+                {
+                    height: 200px;
+                    width: 200px;
+                    padding: 15px;
+                }
+                .description
+                {
+                    margin: 20px;
+                    min-height: 100px;
+                }
+                .item-select
+                {
+                    margin:10px 0 0 0;
+                }
+                .buynow-btn
+                {
+                    border: 1px solid green;
+                    background: green;
+                    padding: 5px 15px;
+                    border-radius: bold;
+                    margin-top: 10px;
+                    color:white;
+                }
+                .buynow-btn:hover
+                {
+                    border: 1px solid white;
+                    box-shadow: 0 0 10px 5px white insert;
+                }
+            </style>
+            </div>
+       <div class="items">
+                    <div class="images">
+                        <img src="carrot.jpg" class="item-image-size">    
+                    </div>
+                    <div class="description">
+                        <b>Carrots</b><br/>
+                        <div class="item-select">
+                            price:$34.89/250grams
+                        </div>
+                        <label> Qty:</label>
+                        <select class="items-select">
+                            <option>250 grams</option>
+                            <option>500 grams</option>
+                            <option>750 grams</option>
+                            <option>1000 grams</option>
+                        </select><br/>
+                        <button class="buynow-btn">Buy Now</button>
+                    </div>
+                    </div>
+    </div>
+</div>
+<!--Veg Ends Here-->
+<!-- Fruits Begins Here -->
+<div class="deals-container" id="fruits">
+    <div class="parallax">
+        <div class="title">FRUITS</div>
+    </div>
+    <div class="items">
+        <div class="images">
+            <img src="watermelon.jpg" class="item-image-size">
+        </div>
+        <div class="description">
+            <b>watermelon</b><br/>
+            <div class="item-select">
+                price:$65.78/250grams
+            </div>
+            <label> Qty:</label>
+            <select class="items-select">
+                <option>250 grams</option>
+                <option>500 grams</option>
+                <option>750 grams</option>
+                <option>1000 grams</option>
+            </select><br/>
+            <button class="buynow-btn">Buy Now</button>
+        </div>
+        </div>
+        <div class="items">
+            <div class="images">
+                <img src="straberry.jpg" class="item-image-size">
+                
+            </div>
+            <div class="description">
+                <b>Straberry</b><br/>
+                <div class="item-select">
+                    price:$98.87/250grams
+                </div>
+                <label> Qty:</label>
+                <select class="items-select">
+                    <option>250 grams</option>
+                    <option>500 grams</option>
+                    <option>750 grams</option>
+                    <option>1000 grams</option>
+                </select><br/>
+                <button class="buynow-btn">Buy Now</button>
+            </div>
+            <style>
+                .images
+                {
+                    display: inline-block;
+                }
+                .item-image-size
+                {
+                    height: 200px;
+                    width: 200px;
+                    padding: 15px;
+                }
+                .description
+                {
+                    margin: 20px;
+                    min-height: 100px;
+                }
+                .item-select
+                {
+                    margin:10px 0 0 0;
+                }
+                .buynow-btn
+                {
+                    border: 1px solid green;
+                    background: green;
+                    padding: 5px 15px;
+                    border-radius: bold;
+                    margin-top: 10px;
+                    color:white;
+                }
+                .buynow-btn:hover
+                {
+                    border: 1px solid white;
+                    box-shadow: 0 0 10px 5px white insert;
+                }
+            </style>
+            </div>
+    <div class="items">
+                    <div class="images">
+                        <img src="grapes.jpg" class="item-image-size">
+                        </div>
+                    <div class="description">
+                        <b>Grapes</b><br/>
+                        <div class="item-select">
+                            price:$34.89/250grams
+                        </div>
+                        <label> Qty:</label>
+                        <select class="items-select">
+                            <option>250 grams</option>
+                            <option>500 grams</option>
+                            <option>750 grams</option>
+                            <option>1000 grams</option>
+                        </select><br/>
+                        <button class="buynow-btn">Buy Now</button>
+                    </div>
+                    </div>
+    </div>
+</div>
+<!-- Fruits Page Ends-->
+<!-- Home Page Ends-->
+    <!--Footer starts here -->
+ <div class="parallax1">
+     <div class="footer">
+         <style>
+             .footer
+             {
+                 background:rgba(0,0,0,0.5);
+                 text-align: center;
+                 padding: 20px;
+             }
+         </style>
+         <div class="quick-links">
+             <style>
+                 .quick-links
+                 {
+                     color: white;
+                     font-size: 20px;
+                     font-weight: bold;
+                     display: inline-block;
+                     min-width: 30%
+                 }
+                 .quick-links ul{
+                     padding: 0%;
+                 }
+                 .quick-links li
+                 {
+                     list-style: none;
+                     padding: 10px;
+                     font-weight:300px;
+                       }
+                 .a-links:hover{
+                     color: white;
+                 }
+             </style>
+             <div>Locations</div>
+             <ul>
+                 <li><a href=" " class="a-links">Address 1</a></li>
+                 <li><a href=" " class="a-links">Address 2</a></li>
+                 <li><a href=" " class="a-links">Address 2</a></li>
+             </ul>
+         </div>
+         <div class="quick-links">
+            <div>Careers</div>
+            <ul>
+                <li><a href=" " class="a-links">Packing Staff</a></li>
+                <li><a href=" " class="a-links">Delivery Agents</a></li>
+                <li><a href=" " class="a-links">Shelf Filters</a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <div>Quick Links</div>
+            <ul>
+                <li><a href=" " class="a-links">Contact Us</a></li>
+                <li><a href=" " class="a-links">FAQ</a></li>
+                <li><a href=" " class="a-links">Help</a></li>
+            </ul>
+        </div>
+     </div>   
+ </div>
+ <!-- Footer ends here-->
+</head>
+</head>
